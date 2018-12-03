@@ -1,0 +1,12 @@
+Source: ros-indigo-dataspeed-ulc-can
+Section: misc
+Priority: extra
+Maintainer: Micho Radovnikovich <mradovnikovich@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-can-msgs, ros-indigo-catkin, ros-indigo-dataspeed-ulc-msgs, ros-indigo-geometry-msgs, ros-indigo-nodelet, ros-indigo-roscpp, ros-indigo-std-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-indigo-dataspeed-ulc-can
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-can-msgs, ros-indigo-dataspeed-ulc-msgs, ros-indigo-geometry-msgs, ros-indigo-nodelet, ros-indigo-roscpp, ros-indigo-std-msgs
+Description: Package to translate ROS messages to and from CAN messages to interact with the Universal Lat/Lon Controller (ULC) firmware
