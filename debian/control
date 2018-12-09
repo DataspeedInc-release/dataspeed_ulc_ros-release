@@ -1,0 +1,12 @@
+Source: ros-melodic-dataspeed-ulc
+Section: misc
+Priority: extra
+Maintainer: Micho Radovnikovich <mradovnikovich@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-dataspeed-ulc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-dataspeed-ulc-can, ros-melodic-dataspeed-ulc-msgs
+Description: CAN interface to the Universal Lat/Lon Controller (ULC) firmware
