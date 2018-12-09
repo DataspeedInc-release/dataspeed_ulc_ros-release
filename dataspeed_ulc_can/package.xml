@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>dataspeed_ulc_can</name>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <description>
     Package to translate ROS messages to and from CAN messages to interact with the Universal Lat/Lon Controller (ULC) firmware
   </description>
@@ -22,6 +22,7 @@
   <depend>dataspeed_ulc_msgs</depend>
 
   <test_depend>roslib</test_depend> <!-- Needed for ROS_DISTRO environment variable -->
+  <test_depend>rostest</test_depend>
 
   <export>
     <nodelet plugin="${prefix}/nodelets.xml" />
