@@ -1,0 +1,22 @@
+ros-indigo-dataspeed-ulc-can (0.0.3-0trusty) trusty; urgency=high
+
+  * Added tcpNoDelay() for subscribers
+  * Contributors: Kevin Hallenbeck
+
+ -- Micho Radovnikovich <mradovnikovich@dataspeedinc.com>  Sun, 09 Dec 2018 05:00:00 -0000
+
+ros-indigo-dataspeed-ulc-can (0.0.2-0trusty) trusty; urgency=high
+
+  * Cleanup and test updates
+  * Contributors: Kevin Hallenbeck
+
+ -- Micho Radovnikovich <mradovnikovich@dataspeedinc.com>  Wed, 05 Dec 2018 05:00:00 -0000
+
+ros-indigo-dataspeed-ulc-can (0.0.1-0trusty) trusty; urgency=high
+
+  * Initial release
+  * Contributors: Kevin Hallenbeck, Micho Radovnikovich
+
+ -- Micho Radovnikovich <mradovnikovich@dataspeedinc.com>  Fri, 30 Nov 2018 05:00:00 -0000
+
+
