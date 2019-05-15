@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 import rospy
-from speed import Speed
+from dataspeed_ulc_can import Speed
 
 
 class SpeedSquareWave(Speed):
