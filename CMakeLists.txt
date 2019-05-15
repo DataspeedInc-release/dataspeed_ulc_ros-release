@@ -3,6 +3,7 @@ project(dataspeed_ulc_can)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
+  rospy
   nodelet
   std_msgs
   geometry_msgs
@@ -62,10 +63,12 @@ install(FILES nodelets.xml
 install(DIRECTORY include/${PROJECT_NAME}/
         DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 )
-install(DIRECTORY scripts
-        DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-        USE_SOURCE_PERMISSIONS
-)
+
+catkin_python_setup()
+catkin_install_python(PROGRAMS
+                        scripts/speed_sine_wave.py
+                        scripts/speed_square_wave.py
+                      DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 ### Tests
 if (CATKIN_ENABLE_TESTING)

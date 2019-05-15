@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 import rospy
 import math
-from speed import Speed
+from dataspeed_ulc_can import Speed
 from dataspeed_ulc_msgs.msg import UlcReport
 
 
