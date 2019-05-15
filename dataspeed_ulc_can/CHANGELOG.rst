@@ -2,6 +2,11 @@
 Changelog for package dataspeed_ulc_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.4 (2019-05-15)
+------------------
+* Install base Python module instead of including it as a script
+* Contributors: Micho Radovnikovich
+
 0.0.3 (2018-12-09)
 ------------------
 * Added tcpNoDelay() for subscribers
