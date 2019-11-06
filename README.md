@@ -1,3 +1,29 @@
+## dataspeed_ulc_ros (melodic) - 0.0.5-1
+
+The packages in the `dataspeed_ulc_ros` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --rosdistro melodic --track melodic dataspeed_ulc_ros` on `Wed, 06 Nov 2019 21:05:13 -0000`
+
+These packages were released:
+- `dataspeed_ulc`
+- `dataspeed_ulc_can`
+- `dataspeed_ulc_msgs`
+
+Version of package(s) in repository `dataspeed_ulc_ros`:
+
+- upstream repository: https://bitbucket.org/DataspeedInc/dataspeed_ulc_ros.git
+- release repository: https://github.com/DataspeedInc-release/dataspeed_ulc_ros-release.git
+- rosdistro version: `0.0.4-1`
+- old version: `0.0.4-1`
+- new version: `0.0.5-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.0`
+- catkin_pkg version: `0.4.8`
+- rosdep version: `0.17.1`
+- rosdistro version: `0.7.5`
+- vcstools version: `0.1.42`
+
+
 ## dataspeed_ulc_ros (kinetic) - 0.0.5-1
 
 The packages in the `dataspeed_ulc_ros` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release --rosdistro kinetic --track kinetic dataspeed_ulc_ros` on `Wed, 06 Nov 2019 21:01:21 -0000`
