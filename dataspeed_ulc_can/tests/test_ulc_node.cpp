@@ -26,8 +26,8 @@ const double YAW_RATE_SCALE_FACTOR = 0.00025;
 const double CURVATURE_SCALE_FACTOR = 0.0000061;
 
 // Config message scale factors
-const double LINEAR_ACCEL_SCALE_FACTOR = 0.02;
-const double LINEAR_DECEL_SCALE_FACTOR = 0.02;
+const double LINEAR_ACCEL_SCALE_FACTOR = 0.025;
+const double LINEAR_DECEL_SCALE_FACTOR = 0.025;
 const double LATERAL_ACCEL_SCALE_FACTOR = 0.05;
 const double ANGULAR_ACCEL_SCALE_FACTOR = 0.02;
 
