@@ -2,6 +2,12 @@
 Changelog for package dataspeed_ulc_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.5 (2019-11-06)
+------------------
+* Updates scale factor on linear accel and decel limit CAN signals
+* Adds README to document the ROS node interface
+* Contributors: Micho Radovnikovich
+
 0.0.4 (2019-05-15)
 ------------------
 * Install base Python module instead of including it as a script
