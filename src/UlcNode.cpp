@@ -260,8 +260,8 @@ void UlcNode::sendCfgMsg()
   memset(ptr, 0x00, sizeof(*ptr));
 
   // Populate acceleration limits
-  ptr->linear_accel  = overflowSaturation(ulc_cmd_.linear_accel,  0, UINT8_MAX, 0.02, "Linear accel limit",  "m/s^2");
-  ptr->linear_decel  = overflowSaturation(ulc_cmd_.linear_decel,  0, UINT8_MAX, 0.02, "Linear decel limit",  "m/s^2");
+  ptr->linear_accel  = overflowSaturation(ulc_cmd_.linear_accel,  0, UINT8_MAX, 0.025, "Linear accel limit",  "m/s^2");
+  ptr->linear_decel  = overflowSaturation(ulc_cmd_.linear_decel,  0, UINT8_MAX, 0.025, "Linear decel limit",  "m/s^2");
   ptr->lateral_accel = overflowSaturation(ulc_cmd_.lateral_accel, 0, UINT8_MAX, 0.05, "Lateral accel limit", "m/s^2");
   ptr->angular_accel = overflowSaturation(ulc_cmd_.angular_accel, 0, UINT8_MAX, 0.02, "Angular accel limit", "rad/s^2");
 
