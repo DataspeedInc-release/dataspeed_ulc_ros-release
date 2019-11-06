@@ -1,0 +1,12 @@
+Source: ros-kinetic-dataspeed-ulc
+Section: misc
+Priority: optional
+Maintainer: Micho Radovnikovich <mradovnikovich@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-dataspeed-ulc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-dataspeed-ulc-can, ros-kinetic-dataspeed-ulc-msgs
+Description: CAN interface to the Universal Lat/Lon Controller (ULC) firmware
