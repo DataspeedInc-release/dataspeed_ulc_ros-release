@@ -58,8 +58,8 @@ typedef struct {
 } MsgUlcCmd;
 
 typedef struct {
-    uint8_t linear_accel;   // 0.02 m/s^2, 0 to 5.1 m/s^2
-    uint8_t linear_decel;   // 0.02 m/s^2, 0 to 5.1 m/s^2
+    uint8_t linear_accel;   // 0.025 m/s^2, 0 to 6.375 m/s^2
+    uint8_t linear_decel;   // 0.025 m/s^2, 0 to 6.375 m/s^2
     uint8_t lateral_accel;  // 0.05 m/s^2, 0 to 12.75 m/s^2
     uint8_t angular_accel;  // 0.02 rad/s^2, 0 to 5.1 rad/s^2
     uint8_t :8;
