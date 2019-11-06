@@ -1,0 +1,37 @@
+ros-melodic-dataspeed-ulc-can (0.0.5-1stretch) stretch; urgency=high
+
+  * Updates scale factor on linear accel and decel limit CAN signals
+  * Adds README to document the ROS node interface
+  * Contributors: Micho Radovnikovich
+
+ -- Micho Radovnikovich <mradovnikovich@dataspeedinc.com>  Wed, 06 Nov 2019 05:00:00 -0000
+
+ros-melodic-dataspeed-ulc-can (0.0.4-1stretch) stretch; urgency=high
+
+  * Install base Python module instead of including it as a script
+  * Contributors: Micho Radovnikovich
+
+ -- Micho Radovnikovich <mradovnikovich@dataspeedinc.com>  Wed, 15 May 2019 04:00:00 -0000
+
+ros-melodic-dataspeed-ulc-can (0.0.3-1stretch) stretch; urgency=high
+
+  * Added tcpNoDelay() for subscribers
+  * Contributors: Kevin Hallenbeck
+
+ -- Micho Radovnikovich <mradovnikovich@dataspeedinc.com>  Sun, 09 Dec 2018 05:00:00 -0000
+
+ros-melodic-dataspeed-ulc-can (0.0.2-1stretch) stretch; urgency=high
+
+  * Cleanup and test updates
+  * Contributors: Kevin Hallenbeck
+
+ -- Micho Radovnikovich <mradovnikovich@dataspeedinc.com>  Wed, 05 Dec 2018 05:00:00 -0000
+
+ros-melodic-dataspeed-ulc-can (0.0.1-1stretch) stretch; urgency=high
+
+  * Initial release
+  * Contributors: Kevin Hallenbeck, Micho Radovnikovich
+
+ -- Micho Radovnikovich <mradovnikovich@dataspeedinc.com>  Fri, 30 Nov 2018 05:00:00 -0000
+
+
