@@ -1,0 +1,12 @@
+Source: ros-noetic-dataspeed-ulc-can
+Section: misc
+Priority: optional
+Maintainer: Micho Radovnikovich <mradovnikovich@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-can-msgs, ros-noetic-catkin, ros-noetic-dataspeed-ulc-msgs, ros-noetic-geometry-msgs, ros-noetic-nodelet, ros-noetic-roscpp, ros-noetic-roslib, ros-noetic-rospy, ros-noetic-rostest, ros-noetic-std-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-dataspeed-ulc-can
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-can-msgs, ros-noetic-dataspeed-ulc-msgs, ros-noetic-geometry-msgs, ros-noetic-nodelet, ros-noetic-roscpp, ros-noetic-rospy, ros-noetic-std-msgs
+Description: Package to translate ROS messages to and from CAN messages to interact with the Universal Lat/Lon Controller (ULC) firmware
