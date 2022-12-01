@@ -2,6 +2,12 @@
 Changelog for package dataspeed_ulc
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.0 (2022-11-30)
+------------------
+* Increase CMake minimum version to 3.0.2 to avoid warning about CMP0048
+  http://wiki.ros.org/noetic/Migration#Increase_required_CMake_version_to_avoid_author_warning
+* Contributors: Kevin Hallenbeck
+
 0.0.5 (2019-11-06)
 ------------------
 
