@@ -1,7 +1,7 @@
 /*********************************************************************
  * Software License Agreement (BSD License)
  *
- *  Copyright (c) 2018, Dataspeed Inc.
+ *  Copyright (c) 2018-2022, Dataspeed Inc.
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -32,55 +32,52 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *********************************************************************/
 
-#ifndef ULCNODE_H
-#define ULCNODE_H
+#ifndef _DATASPEED_ULC_CAN_MODULE_VERSION_H
+#define _DATASPEED_ULC_CAN_MODULE_VERSION_H
+#include <stdint.h>
+#include <endian.h>
 
-#include <ros/ros.h>
-#include <std_msgs/Bool.h>
-#include <geometry_msgs/TwistStamped.h>
-#include <can_msgs/Frame.h>
-#include <dataspeed_ulc_msgs/UlcCmd.h>
-#include <dataspeed_ulc_msgs/UlcReport.h>
-
-#include <dataspeed_ulc_can/PlatformMap.h>
+// Undefine GNU C system macros that we use for other purposes
+#ifdef major
+#undef major
+#endif
+#ifdef minor
+#undef minor
+#endif
 
 namespace dataspeed_ulc_can
 {
 
-class UlcNode
-{
+class ModuleVersion {
 public:
-  UlcNode(ros::NodeHandle &n, ros::NodeHandle &pn);
+  ModuleVersion() : full(0) {};
+  ModuleVersion(uint16_t major, uint16_t minor, uint16_t build) : major_(major), minor_(minor), build_(build), extra_(0) {};
+  bool operator< (const ModuleVersion& other) const { return this->full < other.full; }
+  bool operator> (const ModuleVersion& other) const { return this->full > other.full; }
+  bool operator<=(const ModuleVersion& other) const { return this->full <= other.full; }
+  bool operator>=(const ModuleVersion& other) const { return this->full >= other.full; }
+  bool operator==(const ModuleVersion& other) const { return this->full == other.full; }
+  bool operator!=(const ModuleVersion& other) const { return this->full != other.full; }
+  bool valid() const { return full != 0; }
+  uint16_t major() const { return major_; }
+  uint16_t minor() const { return minor_; }
+  uint16_t build() const { return build_; }
 private:
-
-  void recvCan(const can_msgs::FrameConstPtr& msg);
-  void recvUlcCmd(const dataspeed_ulc_msgs::UlcCmdConstPtr& msg);
-  void recvTwistCmd(const geometry_msgs::Twist& msg);
-  void recvTwist(const geometry_msgs::TwistConstPtr& msg);
-  void recvTwistStamped(const geometry_msgs::TwistStampedConstPtr& msg);
-  void recvEnable(const std_msgs::BoolConstPtr& msg);
-  void configTimerCb(const ros::TimerEvent& event);
-  void sendCmdMsg(bool cfg);
-  void sendCfgMsg();
-
-  ros::Subscriber sub_cmd_;
-  ros::Subscriber sub_twist_;
-  ros::Subscriber sub_twist_stamped_;
-  ros::Subscriber sub_can_;
-  ros::Subscriber sub_enable_;
-  ros::Publisher pub_report_;
-  ros::Publisher pub_can_;
-  ros::Timer config_timer_;
-
-  dataspeed_ulc_msgs::UlcCmd ulc_cmd_;
-  ros::Time cmd_stamp_;
-  bool enable_;
-  bool accel_mode_supported_;
-
-  // Firmware Versions
-  PlatformMap firmware_;
+  union {
+    uint64_t full;
+    struct {
+#if __BYTE_ORDER == __LITTLE_ENDIAN
+      uint16_t build_; uint16_t minor_; uint16_t major_; uint16_t extra_;
+#elif __BYTE_ORDER == __BIG_ENDIAN
+      uint16_t extra_; uint16_t major_; uint16_t minor_; uint16_t build_;
+#else
+#error Failed to determine system endianness
+#endif
+    };
+  };
 };
 
-}
+} //namespace dataspeed_ulc_can
 
-#endif // ULCNODE_H
+#endif // _DATASPEED_ULC_CAN_MODULE_VERSION_H
+
